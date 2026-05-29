@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resip - Recipe Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🍳 Resip</h1>
+            <p class="tagline">Discover Delicious Recipes</p>
+        </div>
+    </header>
+
+    <!-- Category Filter -->
+    <nav class="category-nav">
+        <div class="container">
+            <button class="category-btn active" data-category="all">All Recipes</button>
+            <button class="category-btn" data-category="breakfast">Breakfast</button>
+            <button class="category-btn" data-category="starter">Starter</button>
+            <button class="category-btn" data-category="main">Main Meal</button>
+            <button class="category-btn" data-category="dessert">Dessert</button>
+            <button class="category-btn" data-category="dinner">Dinner</button>
+            <button class="category-btn" data-category="snack">Snack</button>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <section class="search-section">
+        <div class="container">
+            <input 
+                type="text" 
+                id="searchInput" 
+                class="search-bar" 
+                placeholder="Search recipes by name or ingredient..."
+            >
+        </div>
+    </section>
+
+    <!-- Recipes Container -->
+    <main class="container">
+        <div class="recipes-grid" id="recipesGrid">
+            <!-- Recipe cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Recipe Modal -->
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <h2 id="modalTitle"></h2>
+                <p id="modalCategory" class="modal-category"></p>
+                <img id="modalImage" src="" alt="Recipe" class="modal-image">
+                <div class="modal-details">
+                    <div>
+                        <h3>Ingredients:</h3>
+                        <ul id="modalIngredients"></ul>
+                    </div>
+                    <div>
+                        <h3>Instructions:</h3>
+                        <ol id="modalInstructions"></ol>
+                    </div>
+                    <div>
+                        <p><strong>Prep Time:</strong> <span id="modalPrepTime"></span></p>
+                        <p><strong>Cook Time:</strong> <span id="modalCookTime"></span></p>
+                        <p><strong>Servings:</strong> <span id="modalServings"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Resip - Recipe Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="recipes-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
